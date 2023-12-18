@@ -45,6 +45,7 @@ jobs:
                         --define sonar.coverageReportPaths=coverage.xml
       - name: Upload reproducer artifact
         uses: actions/upload-artifact@v3
+        if: always()
         with:
           name: reproducer
           path: sonar-cfamily-reproducer.zip
